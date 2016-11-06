@@ -42,9 +42,7 @@
 #include <libslink.h>
 #include <libdali.h>
 #include <libtidal.h>
-
-#include "firfilter.h"
-#include "crex.h"
+#include <libcrex.h>
 
 #define PROGRAM "slcrex" /* program name */
 

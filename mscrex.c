@@ -39,9 +39,7 @@
 /* libmseed library includes */
 #include <libmseed.h>
 #include <libtidal.h>
-
-#include "firfilter.h"
-#include "crex.h"
+#include <libcrex.h>
 
 #define PROGRAM "msdetide" /* program name */
 
