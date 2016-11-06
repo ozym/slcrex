@@ -1,0 +1,60 @@
+.TH MSDETIDE 1 "15 February 2014" "MSEED TIDE CREX/GTS TOOLS"
+.SH NAME
+mscrex - mini-seed client to build CREX formatted files
+.SH SYNOPSIS
+.B "mscrex"
+[-hvw]
+[-N\ \fIfirfile\fP]
+[-F\ \fIfilter\fP ...]
+[-I\ \fItag\fP]
+[-A\ \fIalpha\fP]
+[-B\ \fIbeta\fP]
+[-L\ \fIlatitude\fP]
+[-Z\ \fIzone\fP]
+[-T\ \fItide\fP]
+[-G <\fIgts_dir\fP>]
+[<mseed_files>]
+.SH DESCRIPTION
+.PP
+The mini-seed client
+.I mscrex
+will convert MSEED files into ASCII formatted CREX packates which can be optionally stored in a GTS directory.
+.SH OPTIONS
+.TP 5
+.B "-h --help"
+provide usage help
+.TP 5
+.B "-v --verbose"
+run program in verbose mode, multiple flags increase the amount of noise
+.TP 5
+.B "-N --firfile \fIfile\fP"
+provide a FIR filters definition file
+.TP 5
+.B "-F --filter \fIname\fP"
+add a FIR decimation filter
+.TP 5
+.B "-I --tag \fItag\fP"
+provide CREX ID tag
+.TP 5
+.B "-A --alpha \fIfactor\fP"
+add offset to input samples
+.TP 5
+.B "-B --beta \fIbeta\fP"
+scale input samples
+.TP 5
+.B "-L --latitude \fIvalue\fP"
+provide reference latitude
+.TP 5
+.B "-Z --zone \fIoffset\fP"
+provide reference time zone offet
+.TP 5
+.B "-T --tide \fIlabel/amplitude/tag\fP"
+provide tidal constants 
+.SH USAGE
+This \fIminiseed\fP client converts MSEED files into ASCII formatted CREX files.
+.SH SEE ALSO
+libmseed, libslink
+.SH AUTHOR
+Mark Chadwick
+.SH COPYRIGHT
+Copyright 2014 Geological \& Nuclear Sciences (GNS Science) Ltd.
