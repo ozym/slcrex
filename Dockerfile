@@ -5,7 +5,7 @@ ENV LIBMSEED_VERSION 2.15
 ENV LIBSLINK_VERSION 2.6
 ENV LIBDALI_VERSION 1.7
 ENV LIBTIDAL_VERSION 1.0.4
-ENV LIBCREX_VERSION 1.0.0
+ENV LIBCREX_VERSION 1.0.1
 
 ADD . /src
 
@@ -42,9 +42,9 @@ RUN apk --update add --no-cache curl make tar gcc libc-dev && \
         cd /tmp/libcrex-${LIBCREX_VERSION} && make && \
         cp -a libcrex.a /usr/lib && \
         cp -a libcrex.h /usr/include && \
+        cp -a filters.fir /etc && \
         rm -rf /tmp/libcrex-${LIBCREX_VERSION} && \
         cd /src && make clean && make && \
-        cp -a filters.fir /etc && \
         cp -a slcrex mscrex /usr/bin && \
         make clean && \
         apk  --no-cache del make tar gcc libc-dev
